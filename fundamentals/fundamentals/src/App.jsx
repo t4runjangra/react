@@ -5,6 +5,8 @@ import './index.css'
 import Header from './components/header'
 import Button from './components/Button'
 import Counter from './components/Counter'
+import Props from './components/Props'
+
 // const obj=[
 //   {id:1,name:"tarun",age:19},
 //   {id:1,name:"aman",age:20},
@@ -25,11 +27,18 @@ const person = {
   born: 2006
 }
 
+
 const { name, born } = person
 
 
 
+
 function App() {
+  console.log("app render");
+  const [count, setCount] = useState(0);
+  const counter = ()=>{
+    setCount(count+1)
+  }
 
   return (
     <>
@@ -48,10 +57,14 @@ function App() {
       <h1 className='bg-amber-300'>Tarun</h1> */}
 
       <Header />
-      <Button name="Click" />
-      <Button name="Tarun" />
+      {/* <Button  /> */}
 
-      <Counter />
+      <button onClick={counter}>
+        CLick ME {count}
+      </button>
+      {/* <Counter /> */}
+
+      <Props count={count} setCount={setCount} />
     </>
   )
 }

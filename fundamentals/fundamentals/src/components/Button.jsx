@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const Button = ({name}) => {
+const Button = ({}) => {
+    console.log("button render");
+    
+    const [count, setCount] = useState(0)
   return (
     <>
-        <button>
-            {name}
+        <button
+            onClick={()=>setCount(count+1)}
+        >
+           Button {count}
         </button>
+        <br />
     </>
     )
 }

@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 
 const Counter = () => {
     const [count, setCount] = useState(0)
+    console.log("Counter child render");
+    
     return (
         <>
             <br />
@@ -12,7 +14,14 @@ const Counter = () => {
             <br />
             <button
                 // value={count}
-                onClick={() => setCount((count) => count + 1)}
+                onClick={() => setCount(count+1)}
+                className='w-10 bg-amber-200 '
+            >
+                +
+            </button>
+            <button
+                // value={count}
+                onClick={() => setCount(count+1)}
                 className='w-10 bg-amber-200 '
             >
                 +
