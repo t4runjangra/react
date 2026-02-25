@@ -1,7 +1,7 @@
 import React from 'react'
 
 const UserProfile = ({ data, loading, error }) => {
-  console.log("UserProfile rendered",data)
+  console.log("UserProfile rendered")
   return (
     <>
       {loading && <p>Loading....</p>}
